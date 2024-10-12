@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 14,
     borderBottomLeftRadius: 14,
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight! + 34 : 34,
+    marginBottom: 20,
   },
   content: {
     paddingLeft: 16,
