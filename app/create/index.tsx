@@ -90,7 +90,7 @@ export default function Create() {
           name="level"
           control={control}
           placeholder="Selecione uma opção"
-          error={errors.gender?.message}
+          error={errors.level?.message}
           options={levelOptions}
         />
         <Text style={styles.label}>Selecione seu objetivo:</Text>
@@ -98,7 +98,7 @@ export default function Create() {
           name="objective"
           control={control}
           placeholder="Selecione uma opção"
-          error={errors.gender?.message}
+          error={errors.objective?.message}
           options={objectiveOptions}
         />
         <Pressable style={styles.button} onPress={handleSubmit(handleCreate)}>

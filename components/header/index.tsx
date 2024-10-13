@@ -10,17 +10,19 @@ import {
 import { Feather } from "@expo/vector-icons";
 import { colors } from "@/constants/colors";
 import { router } from "expo-router";
+import type { ReactNode } from "react";
 
 interface HeaderProps {
   step: string;
   title: string;
+  children?: ReactNode;
 }
 
-export function Header({ step, title }: HeaderProps) {
+export function Header({ step, title, children }: HeaderProps) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        {step !== "0" && (
+        {step !== "0" && !children && (
           <View style={styles.row}>
             <Pressable onPress={() => router.back()}>
               <Feather name="arrow-left" size={24} color="#000" />
@@ -30,7 +32,21 @@ export function Header({ step, title }: HeaderProps) {
             </Text>
           </View>
         )}
-        <Text style={styles.title}>{title}</Text>
+        {!children && <Text style={styles.title}>{title}</Text>}
+        {children && (
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: 20,
+            }}
+          >
+            <Text style={styles.title}>{title}</Text>
+            {children}
+          </View>
+        )}
       </View>
     </SafeAreaView>
   );
