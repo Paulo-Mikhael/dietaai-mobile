@@ -5,7 +5,7 @@ import { Link } from "expo-router";
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Image source={require("../assets/images/logo.png")} />
+      <Image source={require("../assets/images/icon.png")} />
       <Text style={styles.title}>
         Dieta<Text style={{ color: colors.white }}>.AI</Text>
       </Text>
