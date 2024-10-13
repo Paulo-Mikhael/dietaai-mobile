@@ -43,8 +43,6 @@ export default function Nutrition() {
 
   async function handleShare() {
     try {
-      console.log("Função Share");
-
       if (data && Object.keys(data).length === 0) return;
 
       const supplements = `${data?.suplementos.map((suplemento) => `${suplemento}`)}`;
