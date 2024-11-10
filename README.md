@@ -69,7 +69,7 @@
 ## Rodando Localmente (Prompt) 📟
 ### Clone o projeto
 ```bash
-  git clone https://github.com/Paulo-Mikhael/dietaai-mobile?tab=readme-ov-file#readme
+  git clone https://github.com/Paulo-Mikhael/dietaai-mobile
 ```
 ### Entre no diretório do projeto
 ```bash
